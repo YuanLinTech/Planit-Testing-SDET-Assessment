@@ -1,1 +1,1 @@
-# Planit-Testing-SDET-Assessment
+## This repository stores solutions for Planit Testing SDET Assessment questions. SDET_Challenge1.cpp is the solution for Task 2, Challenge 1 and SDET_Challenge2.cpp is the solution for Task 2, Challenge 2.
