@@ -4,7 +4,7 @@ using namespace std;
 
 char GetMostFrequentCharacter(string word)
 {
-    unsigned int j,k,m,n = 0;
+    unsigned int j, k, m, n = 0;
     char ch = '\0';
     // The character which has the maximum number of occurrence in the input string and appears first in the string.
     char MostFrequentCharacter = '\0';
@@ -15,10 +15,10 @@ char GetMostFrequentCharacter(string word)
     // The maximum number of occurrence of a character in the input string.
     __int64 MaxFrequency = 0;
     // The index of the character which has the maximum number of occurrence in the input string and appears first in the string.
-    unsigned int MaxFrequencyIndex = 0; 
+    unsigned int MaxFrequencyIndex = 0;
 
     // Prefill the integer array Frequency[255] with 255 "0"s.
-    for (j = 0; j < 255; j++) 
+    for (j = 0; j < 255; j++)
     {
         Frequency[j] = 0;
     }
@@ -61,7 +61,7 @@ char GetMostFrequentCharacter(string word)
     return MostFrequentCharacter;
 }
 
-int main() 
+int main()
 {
     string word;
     getline(cin, word);
