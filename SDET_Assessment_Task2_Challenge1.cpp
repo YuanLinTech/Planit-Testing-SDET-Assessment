@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-int main() 
+int main()
 {
 	char char_n[3];
 	cout << "n = ";
@@ -15,26 +15,26 @@ int main()
 	Fib[1] = 1;
 
 	// Get the nth number in the Fibonacci sequence given n
-	for (i = 2; i < n + 1; i++) 
+	for (i = 2; i < n + 1; i++)
 	{
-		Fib[i] = Fib[i-1] + Fib[i-2];
+		Fib[i] = Fib[i - 1] + Fib[i - 2];
 	}
 
 	switch (n) {
-		case 1:
-			cout << "The first number in the Fibonacci sequence is " << Fib[n] << endl;
-			break;
-		case 2:
-			cout << "The second number in the Fibonacci sequence is " << Fib[n] << endl;
-			break;
-		case 3:
-			cout << "The third number in the Fibonacci sequence is " << Fib[n] << endl;
-			break;
-		default:
-			cout << "The " << n << "th number in the Fibonacci sequence is " << Fib[n] << endl;
+	case 1:
+		cout << "The first number in the Fibonacci sequence is " << Fib[n] << endl;
+		break;
+	case 2:
+		cout << "The second number in the Fibonacci sequence is " << Fib[n] << endl;
+		break;
+	case 3:
+		cout << "The third number in the Fibonacci sequence is " << Fib[n] << endl;
+		break;
+	default:
+		cout << "The " << n << "th number in the Fibonacci sequence is " << Fib[n] << endl;
 	}
 
-	/* Given a number F, print out whether it's a Fibonacci number 
+	/* Given a number F, print out whether it's a Fibonacci number
 	and what the closest index n in the Fibonacci sequence is.*/
 
 	char char_F[20];
@@ -44,7 +44,7 @@ int main()
 	F = atoll(char_F); // Convert the string entered by the user to an integer.
 
 	// Filling the rest of the 100 elements of the array Fib[100]
-	for (i = n + 1; i < 100; i++)
+	for (i = 2; i < 100; i++) // Use "i=2" rather than "i=n+1" to avoid invalid read from Fib[-1].
 	{
 		Fib[i] = Fib[i - 1] + Fib[i - 2];
 	}
@@ -57,16 +57,16 @@ int main()
 		n++;
 	}
 
-	if (Fib[n] == F) 
+	if (Fib[n] == F)
 	{
-		cout << "F = " << F << " is a Fibonacci number " << "with index n = " << 0 << endl;
+		cout << "F = " << F << " is a Fibonacci number " << "with index n = " << n << endl;
 	}
-	else if (Fib[n]-F >= F-Fib[n-1])
+	else if (Fib[n] - F >= F - Fib[n - 1])
 	{
 		cout << "F = " << F << " is not a Fibonacci number." << endl;
 		cout << "The closest index n in the Fibonacci sequence is " << n - 1 << endl;
 	}
-	else 
+	else
 	{
 		cout << "F = " << F << " is not a Fibonacci number." << endl;
 		cout << "The closest index n in the Fibonacci sequence is " << n << endl;
